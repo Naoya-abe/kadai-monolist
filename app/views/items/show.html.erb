@@ -9,6 +9,7 @@
           <p class="item-title"><%= @item.name %></p>
           <div class="buttons text-center">
             <%= render 'ownerships/want_button', item: @item %>
+            <%= render 'ownerships/have_button', item: @item %>
           </div>
         </div>
       </div>
@@ -18,6 +19,9 @@
   <div class="col-md-3 col-sm-6 col-xs-12">
     <div class="want-users">
       <div class="panel panel-default">
+        <div class="panel-heading text-center">
+          Wantしたユーザ
+        </div>
         <div class="panel-body">
           <% @want_users.each do |user| %>
             <%= link_to user.name, user_path(user) %>
@@ -26,11 +30,14 @@
       </div>
     </div>
     <div class="have-users">
-      <div class="panel panel-deafault">
-        <div class="panel-heaing text-center">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
           Haveしたユーザ
         </div>
         <div class="panel-body">
+          <% @have_users.each do |user| %>
+            <%= link_to user.name, user_path(user) %>
+          <% end %>
         </div>
       </div>
     </div>
