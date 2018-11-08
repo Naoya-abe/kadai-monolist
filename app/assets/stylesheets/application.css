@@ -84,10 +84,11 @@ p.item-title {
 }
 
 .user-profile .status ul {
-  margin: 0 auto 10 px;
+  margin: 0 auto 10px;
   padding: 0;
   display: table;
 }
+
 
 .user-profile .status ul li {
   width: 120px;
@@ -103,11 +104,11 @@ p.item-title {
   border: none;
 }
 
-.user-profile .status ul li:status-label {
+.user-profile .status ul li .status-label {
   font-size: 12px;
 }
 
-.user-profile .status ul li:status-value {
+.user-profile .status ul li .status-value {
   font-size: 18px;
 }
 
